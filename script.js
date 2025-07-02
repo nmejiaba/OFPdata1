@@ -31,7 +31,16 @@ fetch("https://script.google.com/macros/s/AKfycbzcO63H171eHsInZusTs4WIjBEc70GEuY
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify(sections)
+  .then(response => response.text())
+.then(result => {
+  console.log("Server Response:", result);
+  alert("Server says: " + result);
+})
+.catch(error => {
+  console.error("Error sending to Google Sheets:", error);
+  alert("Failed to send to Google Sheets. See console for details.");
 });
+
 
 
   };
