@@ -27,7 +27,7 @@ async function processPDF() {
     output.textContent = JSON.stringify(sections, null, 2);
 
     // TODO: Replace with your Google Apps Script WebApp URL
-fetch("YOUR_WEBAPP_URL_HERE", {
+fetch("https://script.google.com/macros/s/AKfycbzcO63H171eHsInZusTs4WIjBEc70GEuY7K3bp8mhP12Aj5WaROUEvR61hdped1YpEjHw/exec", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify(sections)
