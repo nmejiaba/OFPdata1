@@ -27,11 +27,12 @@ async function processPDF() {
     output.textContent = JSON.stringify(sections, null, 2);
 
     // TODO: Replace with your Google Apps Script WebApp URL
-    // fetch("YOUR_GAS_WEBAPP_URL", {
-    //   method: "POST",
-    //   headers: { "Content-Type": "application/json" },
-    //   body: JSON.stringify(sections)
-    // });
+fetch("YOUR_WEBAPP_URL_HERE", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(sections)
+});
+
   };
   reader.readAsArrayBuffer(file);
 }
