@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>OFP PDF Extractor</title>
+</head>
+<body>
+  <h1>Upload OFP PDF</h1>
+  <input type="file" id="pdf-upload" accept="application/pdf" />
+  <button onclick="processPDF()">Extract and Send to Google Sheets</button>
+  <pre id="output"></pre>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.10.377/pdf.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
