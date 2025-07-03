@@ -27,11 +27,12 @@ async function processPDF() {
     output.textContent = JSON.stringify(sections, null, 2);
 
     // TODO: Replace with your Google Apps Script WebApp URL
-fetch("https://script.google.com/macros/s/AKfycbzcO63H171eHsInZusTs4WIjBEc70GEuY7K3bp8mhP12Aj5WaROUEvR61hdped1YpEjHw/exec", {
+fetch("https://script.google.com/macros/s/AKfycbz7jlrX7fi5Bh18lzCDpIk0XnXpkDmI0CyqyCpa6Tr84rJhQHXfadA6wQ_vepvnuMm5rw/exec", {
   method: "POST",
   headers: { "Content-Type": "application/json" },
   body: JSON.stringify(sections)
-  .then(response => response.text())
+})
+.then(response => response.text())
 .then(result => {
   console.log("Server Response:", result);
   alert("Server says: " + result);
@@ -40,6 +41,7 @@ fetch("https://script.google.com/macros/s/AKfycbzcO63H171eHsInZusTs4WIjBEc70GEuY
   console.error("Error sending to Google Sheets:", error);
   alert("Failed to send to Google Sheets. See console for details.");
 });
+
 
 
 
